@@ -504,3 +504,8 @@ const WINDOW_CONFIG = {
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
+
+export const FONT_WEIGHTS = {
+  subtitle: { min: 100, max: 400, default: 100 },
+  title: { min: 400, max: 700, default: 400 },
+};
