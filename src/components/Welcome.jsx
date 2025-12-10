@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { FONT_WEIGHTS } from "../constants";
 
 const setupTextHover = (container, type) => {
-  if (!container) return ()=>{};
+  if (!container) return () => {};
   const letters = container.querySelectorAll("span");
   const { min, max, default: base } = FONT_WEIGHTS[type];
 
@@ -40,21 +40,21 @@ const setupTextHover = (container, type) => {
   return () => {
     container.removeEventListener("mousemove", handleMouseMove);
     container.removeEventListener("mouseleave", handleMouseLeave);
-  }
+  };
 };
 
 const Welcome = () => {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
 
-  useGSAP(()=>{
-    const titleCleanup = setupTextHover(titleRef.current, 'title');
-    const subtitleCleanup = setupTextHover(subtitleRef.current, 'subtitle');
+  useGSAP(() => {
+    const titleCleanup = setupTextHover(titleRef.current, "title");
+    const subtitleCleanup = setupTextHover(subtitleRef.current, "subtitle");
 
     return () => {
-        titleCleanup();
-        subtitleCleanup();
-    }
+      titleCleanup();
+      subtitleCleanup();
+    };
   }, []);
 
   return (
