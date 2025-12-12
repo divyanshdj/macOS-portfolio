@@ -80,7 +80,7 @@ const expList = [
     date: "Sep - Nov, 2025",
     title: "React.js Intern · GKM IT (On-site, Udaipur)",
     image: "/images/logo-gkmit.png",
-    link: "#",
+    link: null,
   },
   {
     id: 2,
