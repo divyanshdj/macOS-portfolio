@@ -35,7 +35,7 @@ const Dock = () => {
       animateIcons(e.clientX - left);
     }
 
-    const resetIcons = () => (
+    const handleMouseLeave = () => (
       icons.forEach((icon)=>{
         gsap.to(icon, {
           scale: 1,
@@ -47,11 +47,11 @@ const Dock = () => {
     )
 
     dock.addEventListener("mousemove", handleMouseMove);
-    dock.addEventListener("mouseleave", resetIcons);
+    dock.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
       dock.removeEventListener("mousemove", handleMouseMove);
-      dock.removeEventListener("mouseleave", resetIcons);
+      dock.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
