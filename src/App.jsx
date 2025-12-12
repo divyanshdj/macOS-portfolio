@@ -1,14 +1,13 @@
-import Navbar from "./components/Navbar"
-import Welcome from "./components/Welcome"
+import { Navbar, Welcome, Dock } from "./components";
 
 function App() {
-
   return (
     <main>
-        <Navbar/>
-        <Welcome/>
+      <Navbar />
+      <Welcome />
+      <Dock />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
