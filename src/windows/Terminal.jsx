@@ -1,4 +1,4 @@
-import { Check, Flag } from "lucide-react";
+import { Check, Command, Flag, Option } from "lucide-react";
 import { techStack } from "../constants";
 import WindowWrapper from "../hoc/WindowWrapper";
 import { WindowControls } from "../components";
@@ -7,8 +7,12 @@ const Terminal = () => {
   return (
     <>
       <div id="window-header">
-        <WindowControls target="terminal"/>
+        <WindowControls target="terminal" />
         <h2>Tech Stack</h2>
+        <div className="ml-10 flex items-center justify-center">
+          <Option size={12} />
+          <Command size={12} />1
+        </div>
       </div>
 
       <div className="techstack">
