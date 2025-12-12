@@ -7,17 +7,17 @@ import gsap from "gsap";
 const Dock = () => {
   const dockRef = useRef(null);
 
-  useGSAP(()=>{
+  useGSAP(() => {
     const dock = dockRef.current;
-    if(!dock) return;
+    if (!dock) return;
 
     const icons = dock.querySelectorAll(".dock-icon");
 
     const animateIcons = (mouseX) => {
       const { left } = dock.getBoundingClientRect();
-      icons.forEach((icon)=>{
-        const { left: iconleft, width } = icon.getBoundingClientRect();
-        const center = iconleft - left + width / 2;
+      icons.forEach((icon) => {
+        const { left: iconLeft, width } = icon.getBoundingClientRect();
+        const center = iconLeft - left + width / 2;
         const distance = Math.abs(mouseX - center);
         const intensity = Math.exp(-(distance ** 2.5) / 20000);
 
@@ -25,26 +25,26 @@ const Dock = () => {
           scale: 1 + 0.35 * intensity,
           y: -15 * intensity,
           duration: 0.2,
-          ease: "power1.out"
-        })
-      })
-    }
+          ease: "power1.out",
+        });
+      });
+    };
 
     const handleMouseMove = (e) => {
       const { left } = dock.getBoundingClientRect();
       animateIcons(e.clientX - left);
-    }
+    };
 
-    const handleMouseLeave = () => (
-      icons.forEach((icon)=>{
+    const handleMouseLeave = () => {
+      icons.forEach((icon) => {
         gsap.to(icon, {
           scale: 1,
           y: 0,
           duration: 0.3,
-          ease: "power1.out"
-        })
-      })
-    )
+          ease: "power1.out",
+        });
+      });
+    };
 
     dock.addEventListener("mousemove", handleMouseMove);
     dock.addEventListener("mouseleave", handleMouseLeave);
@@ -56,28 +56,37 @@ const Dock = () => {
   }, []);
 
   const handleOpenApp = (id) => {
-    return console.log(id);
+    console.log(id);
   };
+
   return (
     <section id="dock">
       <div ref={dockRef} className="dock-container">
         {dockApps.map(({ id, name, icon, canOpen }) => (
-          <div key={id} className="flex justify-center relative">
+          <div
+            key={id}
+            className="flex justify-center relative"
+            data-tooltip-id="dock-tooltip"
+            data-tooltip-content={name}
+            data-tooltip-delay-show={150}
+            aria-label={name}
+          >
             <button
               type="button"
               className="dock-icon"
-              aria-label={name}
-              data-tooltip-id="dock-tooltip"
-              data-tooltip-content={name}
-              data-tooltip-delay-show={150}
               disabled={!canOpen}
               onClick={() => handleOpenApp(id)}
             >
-                <img src={`images/${icon}`} alt={`logo-${name}`} className={!canOpen ? 'opacity-60' : ""} />
+              <img
+                src={`/images/${icon}`}
+                alt={`logo-${name}`}
+                className={!canOpen ? "opacity-60" : ""}
+              />
             </button>
           </div>
         ))}
-        <Tooltip id="dock-tooltip" place="top" className="tooltip"/>
+
+        <Tooltip id="dock-tooltip" place="top" className="tooltip" />
       </div>
     </section>
   );
