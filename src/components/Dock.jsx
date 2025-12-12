@@ -3,8 +3,10 @@ import { dockApps } from "../constants";
 import { Tooltip } from "react-tooltip";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import useWindowStore from "../store/window";
 
 const Dock = () => {
+  const { windows, openWindow, closeWindow } = useWindowStore();
   const dockRef = useRef(null);
 
   useGSAP(() => {
@@ -55,8 +57,18 @@ const Dock = () => {
     };
   }, []);
 
-  const handleOpenApp = (id) => {
-    console.log(id);
+  const handleOpenApp = (id, canOpen) => {
+    if(!canOpen) return;
+
+    const window = windows[id]
+
+    if(window.isOpen){
+      closeWindow(id)
+    }else{
+      openWindow(id)
+    }
+
+    console.log(windows)
   };
 
   return (
@@ -75,7 +87,7 @@ const Dock = () => {
               type="button"
               className="dock-icon"
               disabled={!canOpen}
-              onClick={() => handleOpenApp(id)}
+              onClick={() => handleOpenApp(id, canOpen)}
             >
               <img
                 src={`/images/${icon}`}
