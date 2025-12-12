@@ -58,17 +58,17 @@ const Dock = () => {
   }, []);
 
   const handleOpenApp = (id, canOpen) => {
-    if(!canOpen) return;
+    if (!canOpen) return;
 
-    const window = windows[id]
+    const window = windows[id];
 
-    if(window.isOpen){
-      closeWindow(id)
-    }else{
-      openWindow(id)
+    if (window.isOpen) {
+      closeWindow(id);
+    } else {
+      openWindow(id);
     }
 
-    console.log(windows)
+    console.log(windows);
   };
 
   return (
@@ -95,6 +95,10 @@ const Dock = () => {
                 className={!canOpen ? "opacity-60" : ""}
               />
             </button>
+
+            {windows[id]?.isOpen && (
+              <div className="absolute -bottom-1 w-1 h-1 bg-white/50 rounded-full shadow-md"></div>
+            )}
           </div>
         ))}
 
