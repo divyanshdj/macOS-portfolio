@@ -60,15 +60,13 @@ const Dock = () => {
   const handleOpenApp = (id, canOpen) => {
     if (!canOpen) return;
 
-    const window = windows[id];
+    const win = windows?.[id];
 
-    if (window.isOpen) {
+    if (win.isOpen) {
       closeWindow(id);
     } else {
       openWindow(id);
     }
-
-    console.log(windows);
   };
 
   return (
