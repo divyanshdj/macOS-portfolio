@@ -11,7 +11,7 @@ const Dock = () => {
     const dock = dockRef.current;
     if (!dock) return;
 
-    const icons = dock.querySelectorAll(".dock-icon");
+    const icons = dock.querySelectorAll(".dock-item");
 
     const animateIcons = (mouseX) => {
       const { left } = dock.getBoundingClientRect();
@@ -65,7 +65,7 @@ const Dock = () => {
         {dockApps.map(({ id, name, icon, canOpen }) => (
           <div
             key={id}
-            className="flex justify-center relative"
+            className="dock-item flex justify-center relative"
             data-tooltip-id="dock-tooltip"
             data-tooltip-content={name}
             data-tooltip-delay-show={150}
