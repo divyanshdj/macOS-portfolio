@@ -102,15 +102,15 @@ const blogPosts = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Javascript", "Tailwind Css"],
+    items: ["React.js", "JavaScript", "Tailwind CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "Rest APIs"],
+    items: ["Node.js", "Express", "REST APIs"],
   },
   {
     category: "Programming",
-    items: ["Javascript (ES6+)", "C++", "C"],
+    items: ["JavaScript (ES6+)", "C++", "C"],
   },
   {
     category: "Database",
@@ -118,7 +118,7 @@ const techStack = [
   },
   {
     category: "Dev Tools",
-    items: ["Git", "Github", "Postman", "Docker"],
+    items: ["Git", "GitHub", "Postman", "Docker"],
   },
   {
     category: "Design Tools",
