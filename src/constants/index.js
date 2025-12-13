@@ -44,7 +44,7 @@ const dockApps = [
   },
   {
     id: "safari",
-    name: "Articles", // was "Safari"
+    name: "Experience", // was "Safari"
     icon: "safari.png",
     canOpen: true,
   },
@@ -74,55 +74,54 @@ const dockApps = [
   },
 ];
 
-const blogPosts = [
+const expList = [
   {
     id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    date: "Sep - Nov, 2025",
+    title: "React.js Intern · GKM IT (On-site, Udaipur)",
+    image: "/images/logo-gkmit.png",
+    link: null,
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    date: "Jun - Aug, 2024",
+    title: "Frontend Developer Intern · CSRBOX (Remote)",
+    image: "/images/logo-csrbox.png",
+    link: "https://www.linkedin.com/posts/divyanshjain749_ibm-skillsbuild-front-end-internship-certificate-activity-7233354546339561473-hPlJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIMTtMBWIV6WWPRkMHGFI0X11OJUhrcBn8",
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
-  },
+    date: "May - Jun, 2024",
+    title: "Full-Stack Developer Intern · Cognifyz Technologies (Remote)",
+    image: "/images/logo-cognifyz.webp",
+    link: "https://www.linkedin.com/posts/divyanshjain749_codejourney-developmentskills-cognifyztechnologies-activity-7213929418312847360-7Ery?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIMTtMBWIV6WWPRkMHGFI0X11OJUhrcBn8",
+  }
 ];
 
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
-  },
-  {
-    category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["React.js", "JavaScript", "Tailwind CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Express", "REST APIs"],
+  },
+  {
+    category: "Programming",
+    items: ["JavaScript (ES6+)", "C++", "C"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    items: ["MongoDB", "MySQL"],
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    items: ["Git", "GitHub", "Postman", "Docker"],
+  },
+  {
+    category: "Design Tools",
+    items: ["Figma", "Canva"],
   },
 ];
 
@@ -208,7 +207,7 @@ export {
   navLinks,
   navIcons,
   dockApps,
-  blogPosts,
+  expList,
   techStack,
   socials,
   photosLinks,
