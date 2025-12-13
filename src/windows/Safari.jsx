@@ -55,7 +55,10 @@ const Safari = () => {
         <h2>My Experience</h2>
         <div className="space-y-4">
           {expList.map(({ id, date, title, image, link }) => (
-            <div key={id} className="blog-post border-b-[0.1px] border-b-gray-200">
+            <div
+              key={id}
+              className="blog-post border-b-[0.1px] border-b-gray-200"
+            >
               <div className="col-span-2">
                 <img src={image} alt="logo" />
               </div>
@@ -63,7 +66,10 @@ const Safari = () => {
               <div className="content">
                 <p>{date}</p>
                 <h3>{title}</h3>
-                <a href={link} target="_blank" rel="noopener noreferrer">Check it Out<SquareArrowOutUpRight size={12}/></a>
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  Check it Out
+                  <SquareArrowOutUpRight size={12} />
+                </a>
               </div>
             </div>
           ))}
