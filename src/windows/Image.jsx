@@ -6,7 +6,7 @@ import useWindowStore from "../store/window";
 const Image = () => {
   const { windows } = useWindowStore();
   const data = windows?.imgfile?.data;
-  if (!data) return;
+  if (!data) return null;
   const { name, imageUrl } = data;
   return (
     <>

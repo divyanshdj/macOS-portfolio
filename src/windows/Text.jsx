@@ -6,7 +6,7 @@ import useWindowStore from "../store/window";
 const Text = () => {
   const { windows } = useWindowStore();
   const data = windows?.txtfile?.data;
-  if (!data) return;
+  if (!data) return null;
 
   const { name, image, subtitle, description, link } = data;
   return (
@@ -14,9 +14,11 @@ const Text = () => {
       <div id="window-header">
         <WindowControls target="txtfile" />
         <h2 className="font-bold">{name}</h2>
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <CircleArrowOutUpRight className="icon" />
-        </a>
+        {link && (
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <CircleArrowOutUpRight className="icon" />
+          </a>
+        )}
       </div>
 
       <div className="p-5 space-y-3 bg-white max-h-[50vh] overflow-y-auto">

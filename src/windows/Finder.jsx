@@ -19,19 +19,27 @@ const Finder = () => {
       return setActiveLocation(item);
     }
     if (["url", "fig"].includes(item.fileType) && item.href) {
-      return window.open(item.href, "_blank");
+      const newWindow = window.open(item.href, "_blank", "noopener,noreferrer");
+      if (newWindow) newWindow.opener = null;
+      return;
     }
-    
+
+    if (!item.fileType || !item.kind) {
+      console.warn("Invalid item:", item);
+      return;
+    }
+
     openWindow(`${item.fileType}${item.kind}`, item);
   };
 
-  const renderList = (item) => {
-    return item.map((item) => (
+  const renderList = (items) => {
+    return items.map((item) => (
       <li
         key={item.id}
+        role="button"
         onClick={() => setActiveLocation(item)}
         className={clsx(
-          item.id === activeLocation.id ? "active" : "not-active"
+          item.id === activeLocation.id ? "active" : "not-active", "hover:text-blue-500"
         )}
       >
         <img src={item.icon} className="w-4" alt={item.name} />
