@@ -21,7 +21,8 @@ const Finder = () => {
     if (["url", "fig"].includes(item.fileType) && item.href) {
       return window.open(item.href, "_blank");
     }
-    return;
+    
+    openWindow(`${item.fileType}${item.kind}`, item);
   };
 
   const renderList = (item) => {

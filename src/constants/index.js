@@ -236,6 +236,8 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
+          subtitle: "Full-Stack Learning Management System",
+          link: "https://learnx-lms.vercel.app",
           description: [
             "LearnX LMS is a modern full-stack Learning Management System designed to deliver a complete online learning experience.",
             "It provides role-based access for Students and Instructors with dedicated dashboards and secure authentication.",
@@ -288,6 +290,8 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
+          subtitle: "Swiggy-Inspired Food Delivery Web App",
+          link: "https://taste-hub-food.vercel.app",
           description: [
             "TasteHub is a Swiggy-inspired food delivery web application built to deliver a fast and responsive ordering experience.",
             "It integrates real-time Swiggy APIs to fetch restaurant data, menus, and dynamic content for both mobile and desktop users.",
@@ -340,6 +344,8 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
+          subtitle: "Movie & TV Show Discovery App using TMDB",
+          link: "https://movie-flixx-web.vercel.app/",
           description: [
             "Movie Flix is a React-based movie discovery application that fetches real-time movie and TV show data from the TMDB API.",
             "It features live search with debouncing, detailed movie pages with cast information, and support for Movies, TV Shows, or both.",
@@ -394,7 +400,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/divyansh.jpg",
+      imageUrl: "/images/divyansh.jpeg",
     },
     {
       id: 2,
@@ -422,11 +428,12 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/divyansh.jpg",
+      image: "/images/divyansh.jpeg",
+      link: "https://www.linkedin.com/in/divyanshjain749/",
       description: [
         "Hi, I’m Divyansh 👋, a Computer Science & Engineering student and aspiring software engineer passionate about building modern web applications.",
         "I work primarily with React, JavaScript, and full-stack technologies, focusing on clean UI, smooth UX, and scalable code.",
-        "I enjoy turning ideas into real products—whether it’s a learning platform, a movie discovery app, or a food delivery system.",
+        "I enjoy turning ideas into real products whether it’s a learning platform, a movie discovery app, or a food delivery system.",
         "Beyond coding, I love exploring design, video editing, gaming, swimming, and staying curious about new tech trends.",
       ],
     },

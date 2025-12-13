@@ -27,7 +27,7 @@ const Resume = () => {
         </a>
       </div>
 
-      <Document file="/files/resume.pdf">
+      <Document file="/files/resume.pdf" className="max-h-[70vh] overflow-y-auto">
         <Page pageNumber={1} renderTextLayer renderAnnotationLayer />
       </Document>
     </>
