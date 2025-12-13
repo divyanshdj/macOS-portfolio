@@ -93,7 +93,7 @@ const expList = [
     id: 3,
     date: "May - Jun, 2024",
     title: "Full-Stack Developer Intern · Cognifyz Technologies (Remote)",
-    image: "/images/logo-congnifyz.webp",
+    image: "/images/logo-cognifyz.webp",
     link: "https://www.linkedin.com/posts/divyanshjain749_codejourney-developmentskills-cognifyztechnologies-activity-7213929418312847360-7Ery?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIMTtMBWIV6WWPRkMHGFI0X11OJUhrcBn8",
   }
 ];
