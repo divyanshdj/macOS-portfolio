@@ -70,7 +70,7 @@ const dockApps = [
     id: "trash",
     name: "Archive",
     icon: "trash.png",
-    canOpen: false,
+    canOpen: true,
   },
 ];
 
@@ -128,30 +128,30 @@ const techStack = [
 const socials = [
   {
     id: 1,
-    text: "Github",
+    text: "GitHub",
     icon: "/icons/github.svg",
-    bg: "#f4656b",
+    bg: "#2E2E2E",
     link: "https://github.com/divyanshdj",
   },
   {
     id: 2,
     text: "Portfolio",
     icon: "/icons/atom.svg",
-    bg: "#4bcb63",
+    bg: "#6366F1",
     link: "https://divyanshportfoilo.netlify.app",
   },
   {
     id: 3,
-    text: "Twitter/X",
+    text: "Twitter / X",
     icon: "/icons/twitter.svg",
-    bg: "#ff866b",
+    bg: "#ff6c48",
     link: "https://x.com/divyansh_dj3",
   },
   {
     id: 4,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
-    bg: "#05b6f6",
+    bg: "#0A66C2", 
     link: "https://www.linkedin.com/in/divyanshjain749/",
   },
 ];
@@ -187,19 +187,23 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    name: "Code",
+    imageUrl: "/images/code.jpeg",
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    name: "Divyansh",
+    imageUrl: "/images/divyansh-2.jpeg",
   },
   {
     id: 3,
-    img: "/images/gal3.png",
+    name: "LearnX",
+    imageUrl: "/images/project-1.png",
   },
   {
     id: 4,
-    img: "/images/gal4.png",
+    name: "Zoro",
+    imageUrl: "/images/zoro.png",
   },
 ];
 
@@ -227,7 +231,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5",
-      windowPosition: "top-[5vh] left-5",
+      windowPosition: "top-[2vh] right-0",
       children: [
         {
           id: 1,
@@ -281,7 +285,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
+      windowPosition: "top-[20vh] right-0",
       children: [
         {
           id: 1,
@@ -335,7 +339,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      windowPosition: "top-[38vh] right-0",
       children: [
         {
           id: 1,
@@ -409,16 +413,16 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 right-40",
-      imageUrl: "/images/divyansh-2.jpg",
+      imageUrl: "/images/divyansh-2.jpeg",
     },
     {
       id: 3,
-      name: "conference-me.png",
+      name: "rider-me.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/divyansh-3.jpg",
+      imageUrl: "/images/divyansh-3.jpeg",
     },
     {
       id: 4,
@@ -428,7 +432,7 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/divyansh.jpeg",
+      image: "/images/divyanshdj.jpeg",
       link: "https://www.linkedin.com/in/divyanshjain749/",
       description: [
         "Hi, I’m Divyansh 👋, a Computer Science & Engineering student and aspiring software engineer passionate about building modern web applications.",

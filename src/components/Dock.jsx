@@ -1,11 +1,13 @@
 import { useRef } from "react";
-import { dockApps } from "../constants";
+import { dockApps, locations } from "../constants";
 import { Tooltip } from "react-tooltip";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import useWindowStore from "../store/window";
+import useLocationStore from "../store/location";
 
 const Dock = () => {
+  const { setActiveLocation } = useLocationStore();
   const { windows, openWindow, closeWindow } = useWindowStore();
   const dockRef = useRef(null);
 
@@ -57,9 +59,13 @@ const Dock = () => {
     };
   }, []);
 
-  const handleOpenApp = (id, canOpen) => {
+  const handleOpenApp = (id, canOpen, name) => {
     if (!canOpen) return;
-
+    if (name === "Archive") {
+      setActiveLocation(locations.trash);
+      openWindow("finder");
+      return;
+    }
     const win = windows?.[id];
 
     if (win.isOpen) {
@@ -85,7 +91,7 @@ const Dock = () => {
               type="button"
               className="dock-icon"
               disabled={!canOpen}
-              onClick={() => handleOpenApp(id, canOpen)}
+              onClick={() => handleOpenApp(id, canOpen, name)}
             >
               <img
                 src={`/images/${icon}`}

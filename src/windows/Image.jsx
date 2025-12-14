@@ -19,7 +19,7 @@ const Image = () => {
         </div>
       </div>
 
-      <div className="p-5 bg-white">
+      <div className="p-5 bg-white max-h-[60vh] overflow-y-auto">
         {imageUrl ? (
           <div className="w-full flex justify-center">
             <img
