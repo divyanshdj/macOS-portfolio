@@ -10,7 +10,7 @@ const useLocationStore = create(
 
     setActiveLocation: (location) =>
       set((state) => {
-        if (location === undefined) return;
+        if (!location || typeof location !== 'object') return;
         state.activeLocation = location;
       }),
 
