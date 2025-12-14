@@ -320,7 +320,7 @@ body {
         @apply space-y-1;
 
         .active {
-          @apply bg-blue-100 text-blue-700;
+          @apply bg-blue-100 text-blue-500;
         }
 
         .not-active {
