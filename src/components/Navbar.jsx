@@ -7,9 +7,9 @@ const Navbar = () => {
   const { openWindow } = useWindowStore();
   return (
     <nav className="sm:relative">
-      <time className="sm:hidden text-sm">{dayjs().format("h:mm")}</time>
+      <time className="sm:hidden font-semibold text-sm">{dayjs().format("h:mm A")}</time>
 
-      <div className="absolute left-1/2 -translate-x-1/2 sm:static sm:translate-x-0 flex items-center gap-3">
+      <div className="absolute left-1/2 -translate-x-1/2 sm:static sm:translate-x-0">
         <img src="/images/logo.svg" alt="apple logo" />
         <p className="font-bold text-sm sm:text-base">Divyansh's Portfolio</p>
 
@@ -22,7 +22,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="flex justify-end sm:hidden gap-1">
+      <div className="flex items-center sm:hidden gap-1">
         <Signal className="icon" strokeWidth={2.5} />
         <Wifi className="icon" strokeWidth={2.5} />
         <Battery className="icon" strokeWidth={2.5} fill="currentColor" />
