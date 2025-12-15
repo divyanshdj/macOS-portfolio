@@ -12,11 +12,14 @@ const Dock = () => {
   const dockRef = useRef(null);
 
   useGSAP(() => {
-    const dock = dockRef.current;
-    if (!dock) return;
+  const dock = dockRef.current;
+  if (!dock) return;
 
-    const icons = dock.querySelectorAll(".dock-item");
+  const icons = dock.querySelectorAll(".dock-item");
 
+  const mm = gsap.matchMedia();
+
+  mm.add("(min-width: 640px)", () => {
     const animateIcons = (mouseX) => {
       const { left } = dock.getBoundingClientRect();
       icons.forEach((icon) => {
@@ -57,7 +60,10 @@ const Dock = () => {
       dock.removeEventListener("mousemove", handleMouseMove);
       dock.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, []);
+  });
+
+  return () => mm.kill();
+}, []);
 
   const handleOpenApp = (id, canOpen, name) => {
     if (!canOpen) return;

@@ -73,15 +73,6 @@ const Welcome = () => {
           400
         )}
       </h1>
-
-      <div className="small-screen">
-        <p className="flex-1 text-[16px] text-center font-roboto text-gray-400">
-          This Portfolio is designed for Desktop and Tablet Only,
-          <span className="block mt-2 text-blue-100 font-bold">
-            Mobile Version Launching Soon!
-          </span>
-        </p>
-      </div>
     </section>
   );
 };
