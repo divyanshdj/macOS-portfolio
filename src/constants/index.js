@@ -242,6 +242,7 @@ const WORK_LOCATION = {
           position: "top-5 left-10",
           subtitle: "Full-Stack Learning Management System",
           link: "https://learnx-lms.vercel.app",
+          image: "/images/project-1.png",
           description: [
             "LearnX LMS is a modern full-stack Learning Management System designed to deliver a complete online learning experience.",
             "It provides role-based access for Students and Instructors with dedicated dashboards and secure authentication.",
@@ -266,7 +267,7 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-1.png",
+          imageUrl: "/images/learnx-appflow.jpg",
         },
         {
           id: 4,
@@ -296,6 +297,7 @@ const WORK_LOCATION = {
           position: "top-5 right-10",
           subtitle: "Swiggy-Inspired Food Delivery Web App",
           link: "https://taste-hub-food.vercel.app",
+          image: "/images/project-2.png",
           description: [
             "TasteHub is a Swiggy-inspired food delivery web application built to deliver a fast and responsive ordering experience.",
             "It integrates real-time Swiggy APIs to fetch restaurant data, menus, and dynamic content for both mobile and desktop users.",
@@ -320,7 +322,7 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "img",
           position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
+          imageUrl: "/images/tastehub-appflow.jpg",
         },
         {
           id: 4,
@@ -350,6 +352,7 @@ const WORK_LOCATION = {
           position: "top-5 left-10",
           subtitle: "Movie & TV Show Discovery App using TMDB",
           link: "https://movie-flixx-web.vercel.app/",
+          image: "/images/project-3.png",
           description: [
             "Movie Flix is a React-based movie discovery application that fetches real-time movie and TV show data from the TMDB API.",
             "It features live search with debouncing, detailed movie pages with cast information, and support for Movies, TV Shows, or both.",
@@ -374,7 +377,7 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-3.png",
+          imageUrl: "/images/movieflix-appflow.jpg",
         },
         {
           id: 4,
