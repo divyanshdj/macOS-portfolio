@@ -232,6 +232,7 @@ const WORK_LOCATION = {
       kind: "folder",
       position: "top-10 left-5",
       windowPosition: "top-[2vh] right-0",
+      mobilePosition: "top-[2vh] left-0",
       children: [
         {
           id: 1,
@@ -287,6 +288,7 @@ const WORK_LOCATION = {
       kind: "folder",
       position: "top-52 right-80",
       windowPosition: "top-[20vh] right-0",
+      mobilePosition: "top-[2vh] right-0",
       children: [
         {
           id: 1,
@@ -342,6 +344,7 @@ const WORK_LOCATION = {
       kind: "folder",
       position: "top-10 left-80",
       windowPosition: "top-[38vh] right-0",
+      mobilePosition: "top-[20vh] right-0",
       children: [
         {
           id: 1,
