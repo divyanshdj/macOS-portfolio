@@ -3,7 +3,7 @@ import { techStack } from "../constants";
 import WindowWrapper from "../hoc/WindowWrapper";
 import { WindowControls } from "../components";
 
-const Terminal = ({isMobile}) => {
+const Terminal = () => {
   return (
     <>
       <div id="window-header">
