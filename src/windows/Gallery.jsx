@@ -4,7 +4,7 @@ import { gallery, photosLinks } from "../constants";
 import WindowWrapper from "../hoc/WindowWrapper";
 import useWindowStore from "../store/window";
 
-const Gallery = () => {
+const Gallery = ({isMobile}) => {
   const { openWindow } = useWindowStore();
 
   const openImageWindow = (item) => {
@@ -18,8 +18,8 @@ const Gallery = () => {
         <ImagePlus className="icon" />
       </div>
 
-      <div className="flex bg-white h-full">
-        <div className="sidebar">
+      <div className="flex max-sm:justify-center bg-white h-full">
+        {!isMobile && (<div className="sidebar">
           <ul>
             {photosLinks.map(({ id, icon, title }) => {
               return (
@@ -30,23 +30,33 @@ const Gallery = () => {
               );
             })}
           </ul>
-        </div>
+        </div>)}
 
-        <ul className="content grid grid-cols-2 p-2 gap-2">
-          {gallery.map((item) => (
-            <li
-              key={item.id}
-              className="group aspect-auto overflow-hidden rounded-xl bg-gray-100 cursor-pointer"
-              onClick={()=>openImageWindow(item)}
-            >
-              <img
-                src={item.imageUrl}
-                alt={item.name}
-                className="w-full max-h-[30vh] object-cover transition-transform duration-200 group-hover:scale-105"
-              />
-            </li>
-          ))}
-        </ul>
+        <ul className="content grid grid-cols-1 sm:grid-cols-2 p-2 gap-2">
+  {gallery.map((item) => (
+    <li
+      key={item.id}
+      onClick={() => openImageWindow(item)}
+      className="
+        group cursor-pointer overflow-hidden rounded-xl
+        bg-neutral-200 h-[30vh] w-full sm:aspect-square
+        flex items-center justify-center
+      "
+    >
+      <img
+        src={item.imageUrl}
+        alt={item.name}
+        className="
+          w-full h-full
+          object-cover
+          transition-transform duration-300
+          group-hover:scale-105
+        "
+      />
+    </li>
+  ))}
+</ul>
+
       </div>
     </>
   );

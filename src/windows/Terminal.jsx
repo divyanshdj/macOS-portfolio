@@ -16,17 +16,17 @@ const Terminal = () => {
       </div>
 
       <div className="techstack">
-        <p>
+        <p className="text-sm">
           <span className="font-bold">@Divyansh-MacOS % </span>
           show tech stack
         </p>
         <div className="label">
-          <p className="w-32">Category</p>
-          <p>Technologies</p>
+          <p className="w-32 font-semibold text-[#00A154]">Category</p>
+          <p >Technologies</p>
         </div>
         <ul className="content">
           {techStack.map(({ items, category }) => (
-            <li key={category} className="flex items-center">
+            <li key={category} className="flex items-start sm:items-center flex-col sm:flex-row">
               <Check className="check" size={20} />
               <h3>{category}</h3>
               <ul>
