@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import { navIcons, navLinks } from "../constants";
 import useWindowStore from "../store/window";
@@ -5,13 +6,20 @@ import { Battery, Signal, Wifi } from "lucide-react";
 
 const Navbar = () => {
   const { openWindow } = useWindowStore();
+  const [now, setNow] = useState(dayjs());
+
+  useEffect(() => {
+    const timer = setInterval(() => setNow(dayjs()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <nav className="sm:relative">
-      <time className="sm:hidden font-semibold text-sm">{dayjs().format("h:mm A")}</time>
+      <time className="sm:hidden font-semibold text-sm">{now.format("h:mm A")}</time>
 
       <div className="sm:hidden absolute left-1/2 -translate-x-1/2 w-3/12 py-3.5 rounded-full bg-black/90">
-      <span className="absolute right-3 w-3 h-3 z-0 rounded-full bg-gray-400/10"/>
-      <span className="absolute right-4 h-1 w-1 rounded-full z-10 bg-gray-600/10" />
+        <span className="absolute right-3 w-3 h-3 z-0 rounded-full bg-gray-400/10" />
+        <span className="absolute right-4 h-1 w-1 rounded-full z-10 bg-gray-600/10" />
       </div>
 
       <div className="max-sm:hidden">
@@ -42,7 +50,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <time>{dayjs().format("ddd D MMM h:mm:ss A")}</time>
+        <time>{now.format("ddd D MMM h:mm:ss A")}</time>
       </div>
     </nav>
   );
