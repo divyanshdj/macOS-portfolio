@@ -33,7 +33,7 @@ function App() {
   if (!ready) {
     return (
       <div className="fixed inset-0 bg-black flex flex-col items-center justify-center gap-6 select-none">
-        <div className="text-white text-5xl sm:text-6xl font-light"></div>
+        <img src="/images/logo.svg" className="w-12 invert brightness-200" alt="apple logo" />
 
         <div className="w-40 sm:w-52 h-1 bg-white/20 rounded-full overflow-hidden">
           <div className="h-full w-1/3 bg-white rounded-full animate-macos-loader" />
